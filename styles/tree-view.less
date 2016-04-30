@@ -1,0 +1,64 @@
+@import "ui-variables.less";
+@import "ui-mixins.less";
+@import "octicon-mixins";
+@import "octicon-utf-codes";
+
+.tree-view {
+  font-size: @font-size;
+  background: @tree-view-background-color;
+  padding-top: 2px;
+
+  .project-root.project-root {
+    &:first-child {
+      padding-top: 0;
+    }
+    &:before {
+      height: @tab-height;
+      background-clip: padding-box;
+    }
+
+    & > .header {
+      & .name {
+        .text(bold);
+        color: @text-color-highlight;
+        height: @tab-height + 1px;
+        line-height: @tab-height;
+      }
+      &:before {
+        color: @theme-text-color-highlight;
+        transition: all @transition-time ease;
+      }
+    }
+  }
+
+  .directory.selected:before {
+    background: transparent !important;
+  }
+
+  .list-tree {
+    .list-tree {
+      border-left: 1px solid lighten(@tree-view-background-color, 6%);
+    }
+    .list-item.file.entry {
+      &:after {
+        opacity: .26;
+        .octicon-font();
+        content: @dash;
+        position: relative;
+        float: left;
+        left: -17px;
+      }
+      &[class^="status-"], &[class*="status-"] {
+        &:after {
+          opacity: .54;
+        }
+      }
+    }
+  }
+}
+
+.tree-view-resizer {
+  .tree-view-resize-handle {
+    width: 8px;
+  }
+}
