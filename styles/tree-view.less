@@ -42,11 +42,16 @@
     .list-item.file.entry {
       &:after {
         opacity: .26;
-        .octicon-font();
-        content: @dash;
+        content: "·";
         position: relative;
         float: left;
-        left: -17px;
+        left: -18px;
+      }
+      &.selected {
+        &:after {
+          content: "•";
+          left: -20px;
+        }
       }
       &[class^="status-"], &[class*="status-"] {
         &:after {
