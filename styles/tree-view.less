@@ -41,17 +41,18 @@
     }
     .list-item.file.entry {
       &:after {
+        font-family: monospace;
         opacity: .26;
         content: "·";
         position: relative;
         float: left;
         left: -18px;
+        margin-right: -3px;
       }
       &.selected {
-        margin-left: 13px;
         &:after {
-          content: "•";
-          left: -16px;
+         content: "•";
+         left: -17px;
         }
       }
       &[class^="status-"], &[class*="status-"] {
