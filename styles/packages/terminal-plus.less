@@ -1,0 +1,31 @@
+.terminal-plus {
+  &.terminal-view {
+    .btn-toolbar {
+      padding-bottom: @component-padding;
+      .btn {
+        .button(@button-border-color);
+
+        margin: 0 1px;
+
+        &.left {
+          margin-left: @component-padding/2;
+        }
+        &.right:last-child {
+          margin-right: @component-padding/2;
+        }
+        .icon:before{
+          width: initial;
+        }
+      }
+    }
+  }
+
+  &.status-bar .icon-x {
+    color: @text-color;
+  }
+
+  .xterm {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}

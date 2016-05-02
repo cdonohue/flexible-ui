@@ -1,0 +1,34 @@
+linter-bottom-tab {
+  background: transparent;
+  border-color: @tab-border-color;
+  transition: color @transition-time ease, background @transition-time ease;
+
+  &:nth-child(2) {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  &:hover,
+  &.active {
+    color: @text-color-selected;
+    background: @tab-background-color-hover;
+  }
+
+  &:last-of-type {
+    margin-right: @component-padding;
+  }
+}
+
+.linter-list {
+  padding-left: @component-padding;
+  padding-right: @component-padding;
+}
+
+linter-panel:empty {
+  display: none;
+}

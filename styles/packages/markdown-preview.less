@@ -1,0 +1,68 @@
+.markdown-preview[data-use-github-style] {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif !important;
+    color: inherit;
+  }
+}
+
+.markdown-preview:not([data-use-github-style]) {
+  color: @markdown-preview-color;
+  background-color: @markdown-preview-background-color;
+
+  h1,
+  h2 {
+    border-color: @markdown-preview-border-color;
+  }
+
+  a {
+    color: @text-color-info;
+  }
+
+  hr {
+    background-color: @markdown-preview-background-color;
+    border-color: @markdown-preview-border-color;
+  }
+
+  blockquote {
+    color: @text-color;
+    border-left-color: @text-color-subtle;
+  }
+
+  table {
+    th,
+    td {
+      border-color: @markdown-preview-border-color;
+    }
+
+    th {
+      background-color: lighten(@markdown-preview-background-color, 3%);
+    }
+
+    tr {
+      background-color: @markdown-preview-background-color;
+
+      &:nth-child(2n) {
+        background-color: darken(@markdown-preview-background-color, 3%);
+      }
+    }
+  }
+
+  code {
+    color: @markdown-preview-color; //@markdown-preview-code-color;
+    border-color: @markdown-preview-border-color;
+    background-color: @markdown-preview-background-color; //@markdown-preview-code-background-color;
+    background-clip: padding-box;
+  }
+
+  atom-text-editor::shadow {
+    .line.cursor-line {
+      background-color: transparent;
+    }
+  }
+}
