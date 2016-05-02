@@ -1,6 +1,6 @@
 # Flexible UI
 
-Flexible is an adaptable UI theme for Atom that is based off of [Nucleus Dark] (https://github.com/ignism/nucleus-dark-ui)
+Flexible is an adaptable UI theme for Atom that is based off of [Nucleus Dark UI](https://github.com/ignism/nucleus-dark-ui)
 
 #### Features
 - Improved file drawer using scope lines and file indicators
