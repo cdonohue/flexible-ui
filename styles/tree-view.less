@@ -1,6 +1,6 @@
 @import "ui-variables.less";
 @import "ui-mixins.less";
-@import "octicon-mixins";
+@import "octicon-mixins.less";
 @import "octicon-utf-codes";
 
 .tree-view {
@@ -29,6 +29,22 @@
         transition: all @transition-time ease;
       }
     }
+
+    .tree-view-git-status {
+      opacity: .54;
+      margin-left: 8px;
+      font-size: 14px;
+
+      &:before {
+        .octicon-font();
+        content: @git-branch;
+        margin-right: 3px;
+      }
+
+      &:after {
+        content: "";
+      }
+    }
   }
 
   .directory.selected:before {
@@ -40,22 +56,20 @@
       border-left: 1px solid lighten(@tree-view-background-color, 6%);
     }
     .list-item.file.entry {
+      transition: .2s ease-in;
       &:after {
-        font-family: monospace;
+        .octicon-font();
         opacity: .26;
-        content: "·";
+        content: "•";
         position: relative;
+        font-size: 7px;
         float: left;
-        top: 2px;
-        left: -21.75px;
+        top: 1px;
+        left: -18.5px;
+        width: 6px;
         margin-right: -8px;
       }
-      &.selected {
-        &:after {
-         content: "•";
-         left: -20.5px;
-        }
-      }
+
       &[class^="status-"], &[class*="status-"] {
         &:after {
           opacity: .54;
