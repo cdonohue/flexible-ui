@@ -24,14 +24,14 @@
     border-left: 1px solid transparent;
     border-right: 1px solid transparent;
     border-top: 1px solid transparent;
-    border-bottom: 1px solid @tab-border-color;
+    border-bottom: none;
     padding-left: 20px !important;
     padding-right: 20px !important;
     position: relative;
     transition: all @transition-time ease;
 
     &:not(:first-child) {
-      border-left: 1px solid @tab-border-color;
+      border-left: 1px solid @tab-background-color-active;
     }
 
     .status-modified,
@@ -117,46 +117,42 @@
     color: @text-color-warning;
   }
 
-  .tab.modified:not(:hover) .close-icon {
-    opacity: 1;
-    transform: scale(1);
-    top: 12px;
-    right: 8px;
+  .tab.modified:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    top: 14px;
+    left: 12px;
+    border-radius: 100%;
+    position: absolute;
     display: inline-block;
-    border-color: @background-color-warning;
-    border-width: 1px;
+    box-shadow: inset 0 1px 0 rgba(0,0,0,.12);
+    background-color: @background-color-warning;
   }
 
-  .tab.modified .close-icon:hover {
-    background: @background-color-warning !important;
-    border-width: 1px;
-
-    &:before {
-      color: @text-color-highlight;
-    }
+  .tab.modified:not(:hover) .close-icon {
+    border-color: transparent;
   }
-
 
   .tab .close-icon {
-    top: (@tab-height - 16) / 2;
+    top: 9px;
     height: 16px;
     width: 16px;
-    left: auto;
     right: 4px;
     position: absolute;
-    transform: scale(0);
+    color: inherit;
     opacity: 0;
-    border-radius: 2px;
-    transition: transform @transition-time ease, color @transition-time ease, background @transition-time ease;
-
+    border-radius: 3px;
+    transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
     &:before {
-      color: @text-color-highlight;
-      font-size: 12px;
+      color: @text-color-subtle;
+      font-size: 10px;
       position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 13px;
-      height: 12px;
+      top: 3px;
+      left: 4px;
+      width: 8px;
+      height: 8px;
+      transition: background-color .2s ease-in-out;
     }
 
     &:hover {
@@ -165,7 +161,6 @@
   }
 
   .tab:hover .close-icon {
-    transform: scale(1);
     opacity: 1;
   }
 }
