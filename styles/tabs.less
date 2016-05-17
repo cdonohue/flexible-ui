@@ -170,15 +170,31 @@
   }
 }
 
-.platform-darwin {
-  .tab .close-icon {
-    left: 4px !important;
-    right: auto !important;
-  }
+.tab-bar ~ .item-views .editor {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
 
-  .tab.modified:not(:hover) .close-icon {
-    top: 12px !important;
-    left: 8px !important;
-    right: auto !important;
-  }
+.tab-bar ~ .item-views .editor:before {
+  height: 8px;
+  position: absolute;
+  width: 100%;
+  top: 2px;
+  left: 0;
+  z-index: 1;
+  display: block;
+  content: "";
+  background: linear-gradient( 0deg, transparent, @theme-background-color );
+}
+
+.tab-bar ~ .item-views .editor:after {
+  height: 8px;
+  position: absolute;
+  width: 100%;
+  bottom: 2px;
+  left: 0;
+  z-index: 1;
+  display: block;
+  content: "";
+  background: linear-gradient(0deg, @theme-background-color, transparent);
 }
