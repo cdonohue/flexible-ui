@@ -56,8 +56,14 @@
       border-left: 1px solid lighten(@tree-view-background-color, 6%);
       margin-left: 3px;
     }
+
     .list-item.file.entry {
       transition: .2s ease-in;
+
+      &.selected:before {
+        background: @theme-background-color;
+      }
+
       &:after {
         .octicon-font();
         opacity: .26;
