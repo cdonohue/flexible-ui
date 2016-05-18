@@ -2,7 +2,7 @@
 
 Flexible is an adaptable UI theme for Atom that is based off of [Nucleus Dark UI](https://github.com/ignism/nucleus-dark-ui)
 
-![Editing](https://github.com/cdonohue/flexible-ui/blob/master/screenshots/editing.png)
+![Editing](https://www.dropbox.com/s/ehft1236dmkmgsl/editing.png?dl=0)
 > Shown here with the [Firewatch](https://atom.io/themes/firewatch-syntax) theme
 
 #### Features
