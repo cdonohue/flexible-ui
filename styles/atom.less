@@ -2,6 +2,7 @@
 @import "ui-mixins.less";
 @import "octicon-mixins";
 
+
 status-bar {
   .text(subtle);
   background: lighten(@theme-background-color, 2%) !important;
@@ -199,11 +200,11 @@ atom-text-editor[mini]::shadow {
 
 atom-text-editor[mini].is-focused,
 atom-text-editor[mini].is-focused::shadow {
-  border: 1px solid @input-border-color !important;
+  border: 1px solid @input-border-color;
   background-color: @input-background-color-active;
   &:hover {
-    border: 1px solid @input-border-color !important;
-    background-color: @input-background-color-active !important;
+    border: 1px solid @input-border-color;
+    background-color: @input-background-color-active;
     color: @text-color-highlight !important;
   }
 
