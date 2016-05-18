@@ -165,10 +165,11 @@ atom-text-editor[mini]::shadow {
   background-color: @input-background-color;
   border: 1px solid @input-background-color;
   border-radius: @component-border-radius;
-  padding-left: @component-padding / 2;
+  padding: @component-padding/2 @component-padding;
   height: @input-height;
   max-height: @input-height;
-  line-height: @input-height - 2px;
+  font-size: 12px;
+  line-height: @input-height/2 + 4px;
 
   &:hover {
     border: 1px solid @input-border-color !important;
@@ -178,7 +179,7 @@ atom-text-editor[mini]::shadow {
   .placeholder-text {
     .text(subtle);
     height: @input-height;
-    line-height: @input-height - 2px;
+    line-height: @input-height/2 + 4px;
   }
 
   .cursor {
@@ -192,11 +193,10 @@ atom-text-editor[mini]::shadow {
 
 atom-text-editor[mini].is-focused,
 atom-text-editor[mini].is-focused::shadow {
-  border: 1px solid @text-color-highlight;
+  border: 1px solid @input-border-color !important;
   background-color: @input-background-color-active;
-
   &:hover {
-    border: 1px solid @text-color-highlight !important;
+    border: 1px solid @input-border-color !important;
     background-color: @input-background-color-active !important;
     color: @text-color-highlight !important;
   }
