@@ -194,7 +194,8 @@ atom-text-editor[mini]::shadow {
   }
 
   .selection .region {
-    background-color: @background-color-highlight !important;
+    background-color: fade(@theme-text-color-highlight, 12%);
+    border-radius: 2px;
   }
 }
 
@@ -209,7 +210,8 @@ atom-text-editor[mini].is-focused::shadow {
   }
 
   .selection .region {
-    background-color: @background-color-highlight !important;
+    background-color: fade(@theme-text-color-highlight, 12%);
+    border-radius: 2px;
   }
 }
 
