@@ -27,10 +27,8 @@ atom-panel-container {
     border-left: 1px solid @tool-panel-border-color;
   }
 
-  &.bottom {
-    margin-top: 2px;
+  &.bottom:not(:empty) {
     border-top: 1px solid lighten(@theme-background-color, 4%);
-    z-index: 3;
   }
 }
 
