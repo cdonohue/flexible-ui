@@ -20,19 +20,33 @@ status-bar {
     font-size: 11px;
   }
 
-  .git-view {
-    background: @theme-background-color-light;
+  .git-view:not(:empty) {
     color: @theme-text-color-subtle;
-    margin: 1px 0 0 12px;
-    padding: 0 10px 0 0;
-    height: @component-line-height - 3;
-    line-height: @component-line-height - 6;
-    vertical-align: middle;
-    font-size: 12px !important;
-    border-radius: 3px;
+    margin: 0 0 0 12px;
+    padding: 0;
 
     .git-branch {
       color: @theme-text-color-normal;
+    }
+
+    > * {
+      background: @theme-background-color-light;
+      display: inline-block;
+      padding: 1px 8px 2px 0;
+      margin: 0;
+      line-height: @component-line-height - 6;
+      background: @theme-background-color-light;
+      vertical-align: middle;
+      position: relative;
+      &:first-child {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        padding-left: 8px;
+      }
+      &:last-child {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
     }
   }
 }
