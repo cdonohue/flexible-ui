@@ -196,7 +196,7 @@ kbd {
 
 // input -----------------------------------------------------------------------
 atom-text-editor[mini],
-atom-text-editor[mini]::shadow {
+atom-text-editor[mini].editor {
   transition: all @transition-time ease;
   color: @text-color-highlight;
   background-color: @input-background-color;
@@ -229,7 +229,7 @@ atom-text-editor[mini]::shadow {
 }
 
 atom-text-editor[mini].is-focused,
-atom-text-editor[mini].is-focused::shadow {
+atom-text-editor[mini].is-focused.editor {
   border: 1px solid @input-border-color;
   background-color: @input-background-color-active;
   &:hover {
